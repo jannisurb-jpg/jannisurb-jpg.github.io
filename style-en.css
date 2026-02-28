@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --base-color: #F5F5F5;        /* cleaner white, softer than pure white */
+    --text-color: #111111;        /* strong readable contrast */
+
+    --primary-color: #0F172A;     /* main buttons, project links — highest importance */
+    --secondary-color: #334155;   /* secondary buttons / supporting actions */
+
+    --color-1: #A7F3C0;            /* tiny modern green accent */
+    --color-2: #E3F9EB;            /* soft green background / hover */
+    --color-3: #10B981;
+    --color-4: #10b9813d;        
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color)
+}
+
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1920px, 100%);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: Montserrat, Inter;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(1000em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+header {
+        min-height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    position: relative;
+}
+
+.about-container h2 {
+    margin-left: 3em;
+    font-size: 5rem; /* Groß wie gewünscht */
+    flex: 1;
+}
+
+.about-text {
+    margin-right: 10em;
+    flex: 0 1 34em;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-container::before {
+    content: "";
+    position: absolute;
+    left: 35%; /* adjust this depending on layout */
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-3);
+}
+
+.about-container h2::before {
+    content: "01";
+    position: absolute;
+    left: -15px;
+    font-size: 10rem;
+    font-weight: 800;
+    color: var(--color-4);
+    opacity: 0.4;
+}
+
+.mywork-container h2 {
+    font-size: 5rem; /* Groß wie gewünscht */
+    flex: 1;
+    text-align: center;
+}
+
+.projects-gridcontainer {
+    margin-top: 10em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    justify-items: center; /* 🔥 Fix for centering columns */
+}
+
+.projects-gridcontainer a {
+    text-decoration: none;
+}
+
+.projects-gridcontainer a:hover {
+    text-decoration: underline;
+}
+
+.name {
+    font-size: 4rem;
+    margin-top: .5em;
+}
+
+.whatIDo {
+    margin-top: 0;
+    font-size: 4rem;
+    align-items: left;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: contain;
+    vertical-align: middle;
+    object-position: center 15%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    right: 5%;
+    bottom: 0;
+    width: 420px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--color-2);
+    overflow: hidden;
+}
+
+.text-container {
+    flex: 0 1 80em;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1rem;
+    margin-top: 25%;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.cta-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+section {
+    margin-top: 0;
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.skills-container h2 {
+    font-size: 4rem; /* Groß wie gewünscht */
+    flex: 1;
+    text-align: right;
+    margin-top: 1.5em;
+    margin-right: 4em;
+}
+
+.skills-bar {
+    flex: 2;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.skills-container::before {
+    content: "";
+    position: absolute;
+    right: 40%; /* adjust this depending on layout */
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-3);
+}
+
+.skills-container h2::before {
+    content: "02";
+    position: absolute;
+    right: 0px;
+    font-size: 10rem;
+    font-weight: 800;
+    color: var(--color-4);
+    opacity: 0.4;
+}
+
+.skills-bar .bar {
+    margin: 5rem 0;
+    width: 100%;
+}
+
+.skills-bar .bar:first-child {
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info {
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.progress-line {
+    height: 12px;
+    width: 100%;
+    background: var(--color-4);
+    border-radius: 10px;
+    position: relative;
+    transform: scaleX(0);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform-origin: left;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.05),
+     0px 1px rgba(255, 255, 255, 255, 0.8);
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-line span {
+    height: 100%;
+    width: 80%;
+    background: var(--color-3);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    animation: animate 1s  1s cubic-bezier(1,0,0.5,1) forwards;
+    transform-origin: left;
+}
+
+.progress-line.csharp span {
+    width: 100%;
+}
+
+.progress-line.python span {
+    width: 30%;
+}
+
+.progress-line.html span {
+    width: 57%;
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+    right: 0;
+    top: -10px;
+}
+
+.bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -35px;
+    color: white;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line.csharp span::after {
+    content: "3.5 years";
+}
+
+.progress-line.python span::after {
+    content: "1/2 year";
+}
+
+.progress-line.html span::after {
+    content: "2 years";
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-container video:hover {
+    scale: 1.02;
+}
+
+details {
+    margin-top: 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em;
+    font-size: 1.7rem;
+    font-family: Montserrat, Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+details p {
+    padding: 0 2em 2em 2em;
+}
+
+.reveal a {
+    margin-top: 2em;
+}
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 988px) {
+    header {
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+
+    header img {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 640px) {
+    nav li {
+        display: none;
+
+    }
+    nav li:first-child,
+    nav li:last-child {
+            display: block;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .name {
+    font-size: 3rem;
+    margin-top: .5em;
+    }
+
+    .whatIDo {
+    margin-top: 0;
+    font-size: 3rem;
+    align-items: left;
+    }
+}
