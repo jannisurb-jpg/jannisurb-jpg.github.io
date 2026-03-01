@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --base-color: #F5F5F5;    
-    --text-color: #111111;    
+    --base-color: #F5F5F5;        /* cleaner white, softer than pure white */
+    --text-color: #111111;        /* strong readable contrast */
 
-    --primary-color: #0F172A;  
-    --secondary-color: #334155; 
+    --primary-color: #0F172A;     /* main buttons, project links — highest importance */
+    --secondary-color: #334155;   /* secondary buttons / supporting actions */
 
-    --color-1: #A7F3C0;          
-    --color-2: #E3F9EB;        
+    --color-1: #A7F3C0;            /* tiny modern green accent */
+    --color-2: #E3F9EB;            /* soft green background / hover */
     --color-3: #10B981;
     --color-4: #10b9813d;        
 }
@@ -159,7 +159,7 @@ header {
 .about-container::before {
     content: "";
     position: absolute;
-    left: 35%; 
+    left: 35%; /* adjust this depending on layout */
     top: 0;
     width: 3px;
     height: 100%;
@@ -180,7 +180,7 @@ header {
 }
 
 .mywork-container h2 {
-    font-size: 5rem;
+    font-size: 5rem; /* Groß wie gewünscht */
     flex: 1;
     text-align: center;
 }
@@ -191,7 +191,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 
-    justify-items: center; 
+    justify-items: center; /* 🔥 Fix for centering columns */
 }
 
 .projects-gridcontainer a {
@@ -278,7 +278,7 @@ h2 {
 }
 
 .skills-container h2 {
-    font-size: 4rem;
+    font-size: 4rem; /* Groß wie gewünscht */
     flex: 1;
     text-align: right;
     margin-top: 1.5em;
@@ -294,7 +294,7 @@ h2 {
 .skills-container::before {
     content: "";
     position: absolute;
-    right: 40%; 
+    right: 40%; /* adjust this depending on layout */
     top: 0;
     width: 3px;
     height: 100%;
@@ -508,7 +508,7 @@ footer a:hover {
     .skills-container::before {
     content: "";
     position: absolute;
-    right: 40%;
+    right: 40%; /* adjust this depending on layout */
     top: 0;
     width: 3px;
     height: 0%;
@@ -518,7 +518,7 @@ footer a:hover {
     .about-container::before {
     content: "";
     position: absolute;
-    right: 40%;
+    right: 40%; /* adjust this depending on layout */
     top: 0;
     width: 3px;
     height: 0%;
@@ -541,10 +541,10 @@ footer a:hover {
     }
 
     .about-text {
-        margin-right: 0;
-        text-align: center;
+        margin-right: 0;      /* 👈 wichtig */
+        text-align: center;   /* 👈 damit der Text mittig wird */
         flex: none;
-        max-width: 80%;          
+        max-width: 80%;            /* optional, aber sauber */
     }
 
     .about-container::before {
@@ -616,7 +616,7 @@ footer a:hover {
 
     .skills-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start; /* 🔥 WICHTIG */
     }
 
     .skills-container h2 {
@@ -630,11 +630,11 @@ footer a:hover {
     }
 
     .skills-container h2::before {
-        display: block; 
+        display: block;     /* 🔥 Wichtig */
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: -80px;     
+        top: -80px;         /* Abstand nach Bedarf anpassen */
         font-size: 6rem;
     }
 
