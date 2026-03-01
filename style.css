@@ -409,7 +409,7 @@ h2 {
 }
 
 .progress-line.html span::after {
-    content: "1 Jahre";
+    content: "1 Jahr";
 }
 
 h3 {
@@ -535,3 +535,4 @@ footer a:hover {
     }
 
 }
+
