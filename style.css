@@ -373,7 +373,7 @@ h2 {
 }
 
 .progress-line.html span {
-    width: 57%;
+    width: 40%;
     background-color: yellow;
 }
 
@@ -409,7 +409,7 @@ h2 {
 }
 
 .progress-line.html span::after {
-    content: "2 Jahre";
+    content: "1 Jahre";
 }
 
 h3 {
@@ -533,4 +533,5 @@ footer a:hover {
     font-size: 3rem;
     align-items: left;
     }
+
 }
