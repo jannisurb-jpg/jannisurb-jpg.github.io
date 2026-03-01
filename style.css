@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --base-color: #F5F5F5;        /* cleaner white, softer than pure white */
-    --text-color: #111111;        /* strong readable contrast */
+    --base-color: #F5F5F5;    
+    --text-color: #111111;    
 
-    --primary-color: #0F172A;     /* main buttons, project links — highest importance */
-    --secondary-color: #334155;   /* secondary buttons / supporting actions */
+    --primary-color: #0F172A;  
+    --secondary-color: #334155; 
 
-    --color-1: #A7F3C0;            /* tiny modern green accent */
-    --color-2: #E3F9EB;            /* soft green background / hover */
+    --color-1: #A7F3C0;          
+    --color-2: #E3F9EB;        
     --color-3: #10B981;
     --color-4: #10b9813d;        
 }
@@ -159,7 +159,7 @@ header {
 .about-container::before {
     content: "";
     position: absolute;
-    left: 35%; /* adjust this depending on layout */
+    left: 35%; 
     top: 0;
     width: 3px;
     height: 100%;
@@ -180,7 +180,7 @@ header {
 }
 
 .mywork-container h2 {
-    font-size: 5rem; /* Groß wie gewünscht */
+    font-size: 5rem;
     flex: 1;
     text-align: center;
 }
@@ -191,7 +191,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 
-    justify-items: center; /* 🔥 Fix for centering columns */
+    justify-items: center; 
 }
 
 .projects-gridcontainer a {
@@ -278,7 +278,7 @@ h2 {
 }
 
 .skills-container h2 {
-    font-size: 4rem; /* Groß wie gewünscht */
+    font-size: 4rem;
     flex: 1;
     text-align: right;
     margin-top: 1.5em;
@@ -294,7 +294,7 @@ h2 {
 .skills-container::before {
     content: "";
     position: absolute;
-    right: 40%; /* adjust this depending on layout */
+    right: 40%; 
     top: 0;
     width: 3px;
     height: 100%;
@@ -368,12 +368,16 @@ h2 {
 }
 
 .progress-line.python span {
-    width: 30%;
+    width: 25%;
     background-color: purple;
 }
 
+.bar .progress-line span::after {
+    white-space: nowrap;
+}
+
 .progress-line.html span {
-    width: 40%;
+    width: 50%;
     background-color: yellow;
 }
 
@@ -401,7 +405,7 @@ h2 {
 }
 
 .progress-line.csharp span::after {
-    content: "3,5 Jahre";
+    content: "2 Jahre";
 }
 
 .progress-line.python span::after {
@@ -486,7 +490,7 @@ footer a:hover {
     display: block;
 }
 
-@media(max-width: 988px) {
+@media(max-width: 1875px) {
     header {
         text-align: center;
     }
@@ -500,7 +504,83 @@ footer a:hover {
     }
 }
 
-@media(max-width: 640px) {
+@media(max-width: 1755px) { 
+    .skills-container::before {
+    content: "";
+    position: absolute;
+    right: 40%;
+    top: 0;
+    width: 3px;
+    height: 0%;
+    background-color: var(--color-2);
+    }
+
+    .about-container::before {
+    content: "";
+    position: absolute;
+    right: 40%;
+    top: 0;
+    width: 3px;
+    height: 0%;
+    background-color: var(--color-2);
+    }
+}
+
+@media(max-width:1363px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container h2 {
+        margin-left: 0;
+    }
+    .about-container p {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .about-text {
+        margin-right: 0;
+        text-align: center;
+        flex: none;
+        max-width: 80%;          
+    }
+
+    .about-container::before {
+        display: none;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column-reverse;
+                align-items: center;
+    }
+
+    .skills-container h2 {
+        margin-left: 0;
+    }
+
+    .skills-container::before {
+        display: none;
+    }
+
+    .skills-bar {
+        width: 70%;
+    }
+
+    .skills-container h2::before {
+    content: "02";
+    position: absolute;
+    right: -240px;
+    font-size: 10rem;
+    font-weight: 800;
+    color: var(--color-4);
+    opacity: 1;
+}
+}
+
+@media(max-width: 690px) {
     nav li {
         display: none;
 
@@ -534,5 +614,35 @@ footer a:hover {
     align-items: left;
     }
 
-}
+    .skills-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .skills-container h2 {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    .skills-bar {
+        width: 100%;
+    }
+
+    .skills-container h2::before {
+        display: block; 
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -80px;     
+        font-size: 6rem;
+    }
+
+    .bar .progress-line.python span::after {
+        top: -60px;
+    }
+
+    .mywork-container h2 {
+        font-size: 3rem;
+    }
+}
