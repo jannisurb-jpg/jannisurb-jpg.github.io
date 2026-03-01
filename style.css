@@ -409,7 +409,7 @@ h2 {
 }
 
 .progress-line.python span::after {
-    content: "1/2 Jahre";
+    content: "1/2 Jahr";
 }
 
 .progress-line.html span::after {
@@ -646,3 +646,4 @@ footer a:hover {
         font-size: 3rem;
     }
 }
+
