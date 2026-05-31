@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --base-color: #F5F5F5;        /* cleaner white, softer than pure white */
+    --base-color: #171717;        /* cleaner white, softer than pure white */
     --text-color: #111111;        /* strong readable contrast */
 
     --primary-color: #0F172A;     /* main buttons, project links — highest importance */
